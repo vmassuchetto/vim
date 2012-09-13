@@ -19,6 +19,14 @@ Clone the repository and link the files to your Vim configuration:
     ln -s `pwd`/vim ~/.vim
     ln -s `pwd`/vimrc ~/.vimrc
 
+Helpful Aliases
+---------------
+
+    :nto # NERDTree Open
+    :ntc # NERDTree Close
+    :tbo # TagBar Open
+    :tbc # TagBar Close
+
 Notes
 -----
 
