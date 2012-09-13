@@ -29,4 +29,4 @@ Notes
 Screenshot
 ----------
 
-![Vim Screenshot](https://github.com/viniciusmassuchetto/vim/raw/master/screenshot.png)
+![Vim Screenshot](https://github.com/vmassuchetto/vim/raw/master/screenshot.png)
