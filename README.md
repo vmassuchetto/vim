@@ -16,8 +16,8 @@ Clone the repository and link the files to your Vim configuration:
 
     git clone http://github.com/vmassuchetto/vim/
     cd vim
-    ln -s vim ~/.vim
-    ln -s vimrc ~/.vimrc
+    ln -s `pwd`/vim ~/.vim
+    ln -s `pwd`/vimrc ~/.vimrc
 
 Notes
 -----
