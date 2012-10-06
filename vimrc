@@ -83,6 +83,9 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd BufEnter [Mm]akefile* set noexpandtab
 autocmd BufLeave [Mm]akefile* set expandtab
 
+" Markdown syntax highlight
+autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
+
 " PHP formatting
 let php_sql_query=1
 let php_htmlInStrings=1
