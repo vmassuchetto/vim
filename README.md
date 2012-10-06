@@ -26,6 +26,7 @@ Helpful Aliases
     :ntc # NERDTree Close
     :tbo # TagBar Open
     :tbc # TagBar Close
+    :stm # SyntasticToggleMode
 
 Notes
 -----

@@ -179,6 +179,7 @@ cnoreabbrev tbo TagbarOpen
 cnoreabbrev tbc TagbarClose
 cnoreabbrev nto NERDTree
 cnoreabbrev ntc NERDTreeClose
+cnoreabbrev stm SyntasticToggleMode
 
 " Installed plugins
 call pathogen#infect()
