@@ -2,12 +2,21 @@ About
 -----
 
 That is just a configuration set, plugins and customized colorschemes for VIM
-that I like. By now it uses:
+that I like. By now it uses the following plugins:
 
 * [NERDTree](https://github.com/scrooloose/nerdtree) for browsing files
 * [SuperTab](https://github.com/ervandew/supertab) to tab-complete the code
 * [Syntastic](https://github.com/scrooloose/syntastic) for syntax check
 * [TagBar](https://github.com/majutsushi/tagbar) for browsing code
+
+And some other configuration:
+
+* formatted file names in tab labels
+* `ir_black` colorscheme
+* `omnifunc` autocomplete
+* custom statusline
+* support simultaneous NERDTree, Syntastic and TagBar windows
+* remove trailing whitespaces
 
 Installation
 ------------
