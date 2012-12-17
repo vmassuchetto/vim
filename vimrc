@@ -177,6 +177,31 @@ function! ToggleNERDTreeAndTagbar()
 endfunction
 nmap <leader>\ :call ToggleNERDTreeAndTagbar()<CR>
 
+" Shift tabs
+function ShiftTab(direction)
+    let tab_number = tabpagenr()
+    if a:direction == 0
+        if tab_number == 1
+            exe 'tabm' . tabpagenr('$')
+        else
+            exe 'tabm' . (tab_number - 2)
+        endif
+    else
+        if tab_number == tabpagenr('$')
+            exe 'tabm ' . 0
+        else
+            exe 'tabm ' . tab_number
+        endif
+    endif
+    return ''
+endfunction
+
+" ctrl + shift + page <up|down> will shift tabs
+inoremap <silent> <C-S-PageUp>  <C-r>=ShiftTab(0)<CR>
+inoremap <silent> <C-S-PageDown>  <C-r>=ShiftTab(1)<CR>
+noremap <silent> <C-S-PageUp>  :call ShiftTab(0)<CR>
+noremap <silent> <C-S-PageDown> :call ShiftTab(1)<CR>
+
 " Aliases
 cnoreabbrev tbo TagbarOpen
 cnoreabbrev tbc TagbarClose
