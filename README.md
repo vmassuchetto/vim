@@ -16,7 +16,22 @@ And some other configuration:
 * `omnifunc` autocomplete
 * custom statusline
 * support simultaneous NERDTree, Syntastic and TagBar windows
-* remove trailing whitespaces
+* automatically remove trailing whitespaces on save
+
+Aliases
+-------
+
+    :nto # NERDTree Open
+    :ntc # NERDTree Close
+    :tbo # TagBar Open
+    :tbc # TagBar Close
+    :stm # SyntasticToggleMode
+
+Shortcuts
+---------
+
+* `ctrl + shift + page up` -- move current tab to the left
+* `ctrl + shift + page down` -- move current tab to the right
 
 Installation
 ------------
@@ -27,15 +42,6 @@ Clone the repository and link the files to your Vim configuration:
     cd vim
     ln -s `pwd`/vim ~/.vim
     ln -s `pwd`/vimrc ~/.vimrc
-
-Helpful Aliases
----------------
-
-    :nto # NERDTree Open
-    :ntc # NERDTree Close
-    :tbo # TagBar Open
-    :tbc # TagBar Close
-    :stm # SyntasticToggleMode
 
 Notes
 -----
