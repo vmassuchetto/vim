@@ -21,11 +21,11 @@ And some other configuration:
 Aliases
 -------
 
-    :nto # NERDTree Open
-    :ntc # NERDTree Close
-    :tbo # TagBar Open
-    :tbc # TagBar Close
-    :stm # SyntasticToggleMode
+* `:nto` -- NERDTree Open
+* `:ntc` -- NERDTree Close
+* `:tbo` -- TagBar Open
+* `:tbc` -- TagBar Close
+* `:stm` -- SyntasticToggleMode
 
 Shortcuts
 ---------
