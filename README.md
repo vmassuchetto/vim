@@ -53,6 +53,9 @@ Notes
 * In order for [TagBar](http://majutsushi.github.com/tagbar/) to work you'll
   need [Exuberant Ctags](http://ctags.sourceforge.net/) to generate the
   index files.  Debian-like distributions have a `exuberant-ctags` package.
+* Syntastic will need a syntax checker for the language you're coding. Check
+  for the required software in the comments of the vim files
+  [here](https://github.com/scrooloose/syntastic/tree/master/syntax_checkers).
 
 Screenshot
 ----------
