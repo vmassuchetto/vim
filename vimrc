@@ -1,5 +1,6 @@
 
 " Scheme
+set t_Co=256
 colorscheme ir_black
 syntax on
 filetype on
