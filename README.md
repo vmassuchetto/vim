@@ -43,9 +43,10 @@ Clone the repository and link the files to your Vim configuration:
     ln -s `pwd`/vim ~/.vim
     ln -s `pwd`/vimrc ~/.vimrc
 
-If you want to update the plugins to the latest version:
+And update the plugins:
 
-    git submodule foreach git pull
+    git submodule init
+    git submodule update
 
 Notes
 -----
