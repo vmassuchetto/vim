@@ -36,8 +36,12 @@ set wrapmargin=0
 set formatoptions-=t
 
 " Portuguese spell chek
+" You might want to change this
 set nospell
 set spelllang=pt
+
+" Enable spelling on Markdown and LaTeX files
+autocmd BufNewFile,BufRead markdown,latex set spell
 
 " Indentation
 set autoindent
@@ -59,6 +63,9 @@ set shell=/bin/bash
 " <Home> goes to the first column in row without whitespaces
 map <Home> ^
 imap <Home> <Esc>^i
+
+" <Ctrl>-<Backspace> delete the previous word
+:imap <C-BS> <C-W>
 
 " Custom colors
 highlight CursorLine guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
