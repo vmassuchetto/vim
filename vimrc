@@ -74,6 +74,14 @@ highlight Pmenu      guifg=NONE ctermfg=white ctermbg=black
 highlight PmenuSbar  guifg=NONE ctermfg=white ctermbg=black
 highlight PmenuSel   guifg=NONE ctermfg=black ctermbg=white
 
+" Hightlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=darkgray guibg=darkgray
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 " Tags
 set tags+=$HOME/.vim/tags/python.ctags
 
@@ -97,9 +105,6 @@ autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=mark
 " PHP formatting
 let php_sql_query=1
 let php_htmlInStrings=1
-
-" Remove trailing whitespaces
-autocmd BufWritePre * :%s/\s\+$//e
 
 " Always go to file's directory
 set autochdir
