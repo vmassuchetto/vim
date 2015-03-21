@@ -99,8 +99,9 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd BufEnter [Mm]akefile* set noexpandtab
 autocmd BufLeave [Mm]akefile* set expandtab
 
-" Markdown syntax highlight
-autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
+" Syntax highlight
+autocmd BufRead,BufNewFile *.{md,markdown} set filetype=markdown
+autocmd BufRead,BufNewFile *.{wiki} set filetype=wikipedia
 
 " PHP formatting
 let php_sql_query=1
@@ -149,6 +150,11 @@ set statusline +=%1*%=%5l%*
 set statusline +=%2*/%L%*
 set statusline +=%1*\ %v\ %*
 set statusline +=%2*0x%04B\ %*
+
+" Folding method
+autocmd BufRead * normal zR
+set foldlevel=0
+set foldmethod=marker
 
 " Syntastic
 let g:syntastic_enable_signs=1
@@ -209,7 +215,7 @@ function ShiftTab(direction)
     return ''
 endfunction
 
-" ctrl + shift + page <up|down> will shift tabs
+" ctrl + shift + page <up|down> will move tabs
 inoremap <silent> <C-S-PageUp>  <C-r>=ShiftTab(0)<CR>
 inoremap <silent> <C-S-PageDown>  <C-r>=ShiftTab(1)<CR>
 noremap <silent> <C-S-PageUp>  :call ShiftTab(0)<CR>
@@ -219,6 +225,7 @@ noremap <silent> <C-S-PageDown> :call ShiftTab(1)<CR>
 cnoreabbrev tbo TagbarOpen
 cnoreabbrev tbc TagbarClose
 cnoreabbrev nto NERDTree
+cnoreabbrev ntt NERDTreeTabsToggle
 cnoreabbrev ntc NERDTreeClose
 cnoreabbrev stm SyntasticToggleMode
 
